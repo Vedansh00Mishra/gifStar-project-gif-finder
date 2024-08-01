@@ -1,0 +1,233 @@
+/* Global body styling */
+body {
+  background-color: rgb(18, 18, 18);
+  color: aliceblue;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+/* Sticky header and form container */
+.sticky-container {
+  position: sticky;
+  top: 0;
+  background-color: rgb(18, 18, 18); /* Match the body background */
+  padding: 20px; /* Add padding for spacing */
+  z-index: 1000; /* Ensure it stays on top of other content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading container to align heading and GIF */
+.heading-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Heading styling */
+.heading {
+  color: blueviolet;
+  font-size: 6vh;
+  margin: 0;
+  margin-right: 10px; /* Space between heading and GIF */
+}
+
+/* GIF beside the heading */
+.heading-gif {
+  width: 120px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: row; /* Align children in a row */
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Space between input and button */
+  margin-top: 20px; /* Space above the form */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Input styling */
+form input {
+  font-weight: bolder;
+  font-size: large;
+  background-color: whitesmoke;
+  color: black;
+  width: 31vw; /* Adjust width as needed */
+  max-width: 300px; /* Max width for input field */
+  height: 3.5vh;
+
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Remove border and box-shadow on focus */
+form input:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+/* Button styling */
+form button {
+  height: 4.5vh; /* Adjust height for consistency */
+  width: 4vw;
+  padding: 5px 10px;
+  border: none;
+  background-color: #4299e1;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button hover effect */
+form button:hover {
+  background-color: #3182ce;
+}
+
+/* Random button styling */
+#random {
+  width: 100%; /* Full width on smaller screens */
+  max-width: 150px; /* Maximum width to prevent excessive growth */
+  padding: 10px;
+  border: none;
+  background-color: #f56565;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+  margin: 10px 0; /* Margin for spacing */
+}
+
+#random:hover {
+  background-color: #e53e3e; /* Darker color on hover */
+}
+
+/* GIF container styling */
+.gifs-container {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* GIF item styling */
+.gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gif img {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* Random GIF page styling */
+.random-gif-container h1 {
+  margin: 20vh auto;
+  text-align: center;
+}
+
+.random-gif-container img {
+  width: 80%;
+  margin: 20px auto;
+}
+
+/* Go back button styling */
+#go-back {
+  height: 3vw;
+  width: 8vw;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: none;
+  background-color: #4299e1;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  display: block; /* Center align */
+}
+
+#go-back:hover {
+  background-color: #3182ce;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 4vh;
+  }
+
+  .heading-gif {
+    width: 80px; /* Smaller size for smaller screens */
+  }
+
+  form input {
+    width: 80vw; /* Full width on smaller screens */
+  }
+
+  form button {
+    width: auto; /* Adjust width for button */
+  }
+
+  .gifs-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+  }
+
+  #random {
+    width: 100%; /* Full width on tablets and smaller screens */
+    max-width: 200px; /* Adjust maximum width for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 3vh;
+  }
+
+  .heading-gif {
+    width: 60px; /* Even smaller size for very small screens */
+  }
+
+  form input {
+    width: 90vw; /* Almost full width */
+  }
+
+  form button {
+    width: 90vw; /* Full width buttons */
+    margin-top: 10px; /* Space between input and button */
+  }
+
+  .gifs-container {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+  }
+
+  #random {
+    width: 100%; /* Full width on mobile devices */
+    max-width: 150px; /* Adjust maximum width for mobile */
+  }
+
+  #go-back {
+    width: 80vw; /* Full width go-back button */
+  }
+}
